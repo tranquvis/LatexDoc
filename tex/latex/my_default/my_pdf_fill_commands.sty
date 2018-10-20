@@ -1,0 +1,18 @@
+\newcounter{PdfSWOViolationNr}
+\newcommand{\FillPdfSWOViolation}[3]{
+    \begin{tikzpicture}[overlay]
+        \draw 
+            (6.8 + \thePdfSWOViolationNr * 1.75, -3.6) node {#1}
+            (6.8 + \thePdfSWOViolationNr * 1.75, -4.2) node {#2}
+            (6.8 + \thePdfSWOViolationNr * 1.75, -4.8) node {#3};
+    \end{tikzpicture}
+    \stepcounter{PdfSWOViolationNr}
+}
+\newcommand{\FillPdfSWO}{
+    \begin{tikzpicture}[overlay]
+        \draw 
+            (8, -0.8) node {\myauthor}
+            (-0.15, -1.55) node {x}
+            (15, -0.8) node {8};
+    \end{tikzpicture}
+}

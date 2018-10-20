@@ -11,7 +11,7 @@
 	paper=\mypapersize,  	%% paper format
 	parskip=\myparskip,  	%% vertical space between paragraphs (instead of indenting first par-line)
 	DIV=calc,            	%% calculates a good DIV value for type area; 66 characters/line is great
-	headinclude=true,    	%% is header part of margin space or part of page content?
+	headinclude=false,    	%% is header part of margin space or part of page content?
 	footinclude=false,   	%% is footer part of margin space or part of page content?
 	open=right,          	%% "right" or "left": start new chapter on right or left page
 	appendixprefix=true, 	%% adds appendix prefix; only for book-classes with \backmatter
@@ -62,6 +62,8 @@
   \renewcommand{\headrulewidth}{0pt} % no line in header area
   \fancyfoot[C]{\thepage}
 } 
+
+\fancypagestyle{}
 
 \appto\frontmatter{\pagestyle{plain}}
 \appto\mainmatter{\pagestyle{main}}
