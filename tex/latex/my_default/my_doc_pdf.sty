@@ -1,0 +1,31 @@
+\ProvidesPackage{my_doc_pdf}[My pdf defaults (hyperref)]
+
+\pdfcompresslevel=9
+
+\usepackage[
+	unicode=true, 					%% non-Latin characters in Acrobatâs bookmarks
+	pdftex, 						%%
+	backref, 						%%
+	pagebackref=false,				%% activate back references inside bibliography
+	bookmarks=false, 				%% show or hide the bookmarks bar when displaying the document
+	bookmarksopen=false, 			%% when starting with AcrobatReader, the bookmark column is opened
+	pdfpagemode=UseNone,			%% UseNone, UseOutlines, UseThumbs, FullScreen
+	plainpages=false, 				%% correct, if pdflatex complains: ``destination with same identifier already exists''
+									%% colors: https://secure.wikimedia.org/wikibooks/en/wiki/LaTeX/Colors
+	urlcolor=DispositionColor, 		%% color of external links
+	linkcolor=DispositionColor, 		%% color of internal links
+	citecolor=DispositionColor, 		%% color of citation links (bibliography)
+	anchorcolor=DispositionColor, 	%%
+	colorlinks=\mycolorlinks, 		%% turn on/off colored links (on: better for on-screen reading; off: better for printout versions)
+]{hyperref}
+
+%% all strings need to be loaded after hyperref was loaded with unicode support
+%% if not the field is garbled in the output for characters like ÄÅ½ÄÅ Ä
+\hypersetup{
+	pdftitle={\mytitle},
+	pdfauthor={\myauthor},
+	pdfsubject={\mysubject},
+	pdfcreator={Accomplished with: pdfLaTeX, biber, and hyperref-package. No animals, MS-EULA or BSA-rules were harmed.},
+	pdfproducer={\myauthor},
+	pdfkeywords={\mykeywords}
+}

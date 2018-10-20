@@ -1,0 +1,46 @@
+\newcommand{\myfig}[3]{
+	%% example:
+	% \myfig{}%% filename in figures folder
+	%       {width=0.5\textwidth,height=0.5\textheight}%% maximum width/height, aspect ratio will be kept
+	%       {}%% caption
+	\begin{figure}[htp]
+	\centering
+	\includegraphics[keepaspectratio,#2]{figures/#1}
+	\caption{#3}
+	\end{figure}
+}
+
+\newcommand{\mylandscapefig}[3]{
+	%% example:
+	% \myfig{}%% filename in figures folder
+	%       {width=0.5\textwidth,height=0.5\textheight}%% maximum width/height, aspect ratio will be kept
+	%       {}%% caption
+	\begin{sidewaysfigure}
+	\centering
+	\includegraphics[keepaspectratio,#2]{figures/#1}
+	\caption{#3}
+	\end{sidewaysfigure}
+}
+
+\newcommand{\myinlinecode}[2]{
+	\colorbox{lightgray}{
+		\lstinline[language=#1]$#2$
+	}
+}
+
+\newcommand{\mylstinputlisting}[3]{
+	%% example:
+	% \mylstinputlisting{}%% filename in figures folder
+	%       {width=0.5\textwidth,height=0.5\textheight}%% maximum width/height, aspect ratio will be kept
+	%       {}%% caption
+	\begin{framed}
+	\lstinputlisting[
+		language=#1,
+		extendedchars=true,
+		inputencoding=utf8,
+		caption=#3,
+		literate={€}{{\euro}}1]
+	{#2}
+	\end{framed}
+}
+

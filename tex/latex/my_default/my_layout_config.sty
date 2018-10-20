@@ -1,0 +1,42 @@
+\providecommand{\mypapersize}{A4} %% e.g., "A4", "letter", "legal", "executive", ...
+%% The size of the paper of the resulting PDF file.
+
+\providecommand{\mylaterality}{oneside} %% "oneside" or "twoside"
+%% Either you are creating a document which is printed on both, left pages
+%% and right pages (twoside) or you create a document which is printed
+%% on right pages only (oneside).
+
+\providecommand{\mydraft}{false} %% "true" or "false"
+%% Use draft mode? If true, included graphics are replaced by empty
+%% rectangles (of same size) and overfull boxes (in margin space) are
+%% marked with black box (-> easy to spot!)
+
+\providecommand{\myparskip}{half} %% e.g., "no", "full", "half", ...
+%% How to separate paragraphs: indention ("no") or spacing ("half",
+%% "full", ...).
+
+\providecommand{\myBCOR}{0mm}
+%% Inner binding correction. This value depends on the method which is
+%% being used to bind your printed result. Some techniques do not
+%% require a binding correction at all ("0mm"), other require for
+%% example "5mm".
+
+\providecommand{\myfontsize}{12pt} %% e.g., 10pt, 11pt, 12pt
+%% The font size of the main text in pt (points).
+
+\providecommand{\mylinespread}{1.0} %% e.g., 1.0, 1.5, 2.0
+%% Line spacing in %/100. For example 1.5 means 150% of the usual line
+%% spacing. Please use with caution: 100% ("1.0") is fine because the
+%% font was designed for it.
+
+\definecolor{DispositionColor}{RGB}{0,0,0} %% e.g., "30,103,182" (blue/turquois), "0,0,0" (black), ...
+%% Color of the headings and so forth in RGB (red,green,blue) values.
+%% NOTE: if you are using "0,0,0" for black, printers might still
+%%       recognize pages as color pages. In case this is a problem
+%%       (paying for color print-outs vs. paying for b/w-printouts)
+%%       please edit file "template/preamble.tex" and change
+%%       "\definecolor{DispositionColor}{RGB}{\mydispositioncolor}"
+%%       to "\definecolor{DispositionColor}{gray}{0}" and thus
+%%       overwriting the value of \mydispositioncolor above.
+
+\providecommand{\mycolorlinks}{true}  %% enables or disables colored links (hyperref package)
