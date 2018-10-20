@@ -1,3 +1,15 @@
+%%
+%% Use to fill a specific pdf page.
+%%
+\newcommand{\FillPdfPage}[2]{
+    \ifnum\thepage=#1
+        #2
+    \fi
+}
+
+
+%% FH SWO
+
 \providecommand{\workDuration}{}
 
 \newcounter{PdfSWOViolationNr}
