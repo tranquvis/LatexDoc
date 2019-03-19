@@ -30,6 +30,8 @@
 
 \usepackage{my_doc_commands}
 
+\usepackage{my_listing_languages}
+
 %doc%
 %doc% This packages is very handy to add notes.
 %doc%

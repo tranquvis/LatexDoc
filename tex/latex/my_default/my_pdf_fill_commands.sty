@@ -15,14 +15,14 @@
 \providecommand{\workDuration}{}
 
 \newcounter{PdfSWOViolationNr}
-\newcommand{\FillPdfSWOViolation}[3]{
+\providecommand{\FillPdfSWOViolation}[3]{
     \node at (6.8, -3.6  - \thePdfSWOViolationNr * 0.6) {#1};
     \node at (9, -3.6  - \thePdfSWOViolationNr * 0.6) {#2};
     \node at (11.2, -3.6  - \thePdfSWOViolationNr * 0.6) {#3};
     \stepcounter{PdfSWOViolationNr}
 }
 
-\newcommand{\FillPdfSWO}{
+\providecommand{\FillPdfSWO}{
     \node at (8, -0.8) {\myauthor};
     \node at (-0.15, -1.55) {x};
     \node at (15, -0.8) {\workDuration};

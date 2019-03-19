@@ -24,7 +24,7 @@
 
 \newcommand{\myinlinecode}[2]{
 	\colorbox{lightgray}{
-		\lstinline[language=#1]$#2$
+		\lstinline[language=#1, breaklines=true]$#2$
 	}
 }
 
@@ -42,5 +42,13 @@
 		literate={€}{{\euro}}1]
 	{#2}
 	\end{framed}
+}
+
+\newcommand{\mydefaultlstinputlisting}[2][]{
+	\lstinputlisting[
+		frame=single,
+		extendedchars=true,
+		inputencoding=utf8,
+		#1]{#2}   
 }
 
